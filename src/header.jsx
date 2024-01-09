@@ -1,6 +1,10 @@
+import { useSelector } from "react-redux"
 import { Link } from "react-router-dom"
+import Store from "./assets/store";
 
 export default function Header(){
+const cartItems=useSelector(Store=>Store.cart.items);
+
  return (
    <nav className="navbar navbar-expand-sm bg-dark">
    <div className="container-fluid">
@@ -13,7 +17,7 @@ export default function Header(){
         <Link to="/"> <a className="nav-link active" aria-current="page">Home</a></Link>
          <Link to="/about"><a className="nav-link link-light" >About</a></Link>
          <a className="nav-link" href="#">Help</a>
-         <a className="nav-link link-light " href=""><i class="fas fa-shopping-cart">&nbsp;</i>Cart</a>
+        <Link to='/cart'> <a className="nav-link link-light " href=""><i class="fas fa-shopping-cart">&nbsp;</i>Cart {cartItems.length}</a></Link>
          <button class="btn btn-danger" type="submit">Login</button>
        </div>
      </div>

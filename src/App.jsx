@@ -10,6 +10,9 @@ import { useState ,useEffect } from 'react'
 import { createBrowserRouter ,RouterProvider,Outlet} from 'react-router-dom'
 import About from './about'
 import Restmenu from './restmenu'
+import { Provider } from 'react-redux'
+import Store from './assets/store'
+import Cart from './Cart'
 // import data from './assets/data'
 
 
@@ -17,10 +20,11 @@ function App() {
  
  
   return (
-    <>
+    <><Provider store={Store}>
       <Header/>
       <Outlet/>
       <Footer/>
+      </Provider> 
     </>
   )
 }
@@ -46,6 +50,10 @@ const approuter=createBrowserRouter([
       {
         path:"/restaurents/:id",
         element:<Restmenu/>
+      },
+      {
+        path:"/cart",
+        element:<Cart/>
       }
 
    ]
