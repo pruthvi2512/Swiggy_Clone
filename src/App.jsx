@@ -1,18 +1,21 @@
-import Header from './header'
+import Header from './components/header'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
 import './index.css'
 
-import Body from './body'
-import Footer from './footer'
+import Body from './components/body'
+import Footer from './components/footer'
 import { useState ,useEffect } from 'react'
 import { createBrowserRouter ,RouterProvider,Outlet} from 'react-router-dom'
-import About from './about'
-import Restmenu from './restmenu'
+import About from './components/about'
+import Restmenu from './components/restmenu'
 import { Provider } from 'react-redux'
 import Store from './assets/store'
-import Cart from './Cart'
+import Cart from './components/Cart'
+import Help from './components/help'
+import Payment from './components/payment'
+import Payapp from './components/payapp'
 // import data from './assets/data'
 
 
@@ -53,8 +56,24 @@ const approuter=createBrowserRouter([
       },
       {
         path:"/cart",
-        element:<Cart/>
+        element:<Cart/>,
+        
+        
+      },
+      {
+        path:"/help",
+        element:<Help/>
+      },
+      {
+        path:"/cart/payment",
+        element:<Payment/>
+      },
+      {
+        path:"/cart/payment/pay",
+        element:<Payapp/>
       }
+
+
 
    ]
  }

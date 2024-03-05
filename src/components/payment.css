@@ -1,0 +1,80 @@
+.payment{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 2rem;
+    background-color:rgb(228, 225, 225);
+
+}
+.pay{
+    width:40rem;
+    height: 5rem;
+    background-color:white;
+    border: 1px solid black;
+    margin-bottom: 2rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    
+}
+.adrs{
+    margin-top: 2rem;
+    /* background-color: bisque; */
+    width:40rem;
+    height: 18rem;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 2rem;
+    background-color: white;
+    border-radius: 3px;
+
+}
+.adrs:hover{
+    box-shadow: 5px 5px rgb(208, 205, 205); 
+    cursor: pointer;
+}
+.head{
+    /* background-color: blueviolet; */
+    height: 4rem;
+
+}
+.ad-cards{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 1rem;
+    height: 10rem;
+    padding: 1rem;
+    
+    
+}
+
+.head>p{
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+.ad-card1{
+    flex: 1;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    padding: 5px;  
+    border-radius: 3px; 
+    
+    
+}
+.ad-card2{
+    flex: 1;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    padding: 5px;   
+    border-radius: 3px;
+}

@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { addItem } from "./assets/cartslice";
-import Store from "./assets/store";
+import { addItem } from "../assets/cartslice";
+import Store from "../assets/store";
 function Restmenu(){
     const img_cdn="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
     const params=useParams();
@@ -19,9 +19,9 @@ function Restmenu(){
         const data=await fetch(url);
         const json=await data.json();
         const info=json.data.cards[2].groupedCard.cardGroupMap.REGULAR.cards[2].card.card.itemCards;
-        console.log(info[0].card.info.name);
-        console.log(...info);
-         console.log(json.data.cards[2].groupedCard.cardGroupMap.REGULAR.cards[2].card.card.itemCards[1].card.info.name);
+        console.log(json);
+        console.log(info);
+        //  console.log(json.data.cards[2].groupedCard.cardGroupMap.REGULAR.cards[2].card.card.itemCards[1].card.info.name);
         setrestdetail(info);
 
         console.log(restdetail);
@@ -33,7 +33,7 @@ function Restmenu(){
 
     }
 
-    console.log(restdetail[0]?.card?.info?.name);
+    // console.log(restdetail[0]?.card?.info?.name);
     return <>
     <div className="menulist">
     
