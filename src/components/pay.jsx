@@ -33,7 +33,8 @@ function PaymentPage() {
   const elements = useElements();
   const cartItems=useSelector(Store=>Store.cart.items);
 
-  const sum = cartItems.reduce((total, item) => total + item.price / 100, 0);
+  const sum = cartItems.reduce((total, item) => total + item.price / 100
+  ||item.defaultPrice/100, 0);
   const charge=Math.floor((sum*0.17));
   const total=Math.floor(sum+charge);
 
@@ -78,7 +79,7 @@ function PaymentPage() {
         </button>
       </form>
       {paymentError && <div>{paymentError}</div>}
-      {paymentSuccess && <div>{paymentSuccess}</div>}
+      {paymentSuccess && <div><h4>{paymentSuccess}</h4></div>}
     </div>
 
   );
