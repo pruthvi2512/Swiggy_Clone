@@ -18,7 +18,7 @@ const cartItems=useSelector(Store=>Store.cart.items);
          <Link to="/about"><a className="nav-link " href="" >About</a></Link>
          <Link to="/help"><a className="nav-link" href="">Help</a></Link>
         <Link to='/cart'> <a className="nav-link  " href=""><i class="fas fa-shopping-cart">&nbsp;</i>Cart {cartItems.length}</a></Link>
-         <button className="btn btn-danger" type="submit">Login</button>
+        <Link to='/login'><button className="btn btn-danger" type="submit">Login</button></Link> 
        </div>
      </div>
     

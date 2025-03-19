@@ -7,7 +7,7 @@ export default function Footer(){
             </div>
             <ul className="footer-ul1">
                 <li><h4>Company</h4></li>
-                <li><a href="">About</a> </li>
+                <li><a href="/about">About</a> </li>
                 <li><a href="">Carrier</a></li>
                 <li><a href="">Swiggy instamart</a></li>
                 <li><a href="">Swiggy gennie</a></li>

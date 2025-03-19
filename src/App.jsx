@@ -16,6 +16,7 @@ import Cart from './components/Cart'
 import Help from './components/help'
 import Payment from './components/payment'
 import Payapp from './components/payapp'
+import Login from './components/login'
 // import data from './assets/data'
 
 
@@ -41,6 +42,11 @@ const approuter=createBrowserRouter([
       path:"/about",
        element:<About/>
       
+      },
+      {
+        path:"/login",
+        element:<Login/>
+
       },
       {
         path:"/contact",

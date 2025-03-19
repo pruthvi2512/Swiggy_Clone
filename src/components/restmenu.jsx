@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { addItem } from "../assets/cartslice";
 import Store from "../assets/store";
+import menu1 from "../assets/menu1";
 function Restmenu(){
     const img_cdn="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
     const params=useParams();
@@ -15,15 +16,16 @@ function Restmenu(){
     },[]);
     async function getrestdetail(){
         
-        const url="https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=18.46437579422175&lng=73.83316285908222&restaurantId="+params.id+"&catalog_qa=undefined&submitAction=ENTER"
-        const data=await fetch(url);
-        const json=await data.json();
+       // const url="https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=18.46437579422175&lng=73.83316285908222&restaurantId="+params.id+"&catalog_qa=undefined&submitAction=ENTER"
+        //const data=await fetch(url);
+        //const json=await data.json();
+        const json=menu1();
         console.log(json);
-        const info=json.data.cards[4].groupedCard.cardGroupMap.REGULAR.cards[2].card.card.itemCards;
-        
-        console.log(info);
+        //const info=json.data.cards[4].groupedCard.cardGroupMap.REGULAR.cards[2].card.card.itemCards;
+        const info=json;
+        //console.log(info);
         //  console.log(json.data.cards[2].groupedCard.cardGroupMap.REGULAR.cards[2].card.card.itemCards[1].card.info.name);
-        setrestdetail(info);
+        setrestdetail(json);
 
         console.log(restdetail);
     }
